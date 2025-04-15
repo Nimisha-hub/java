@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Effect | Codehal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f2f2f2;
+}
+
+h1 {
+    font-size: 120px;
+    text-align: center;
+    color: rgba(255, 255, 255, .4);
+}
+
+.parallax-1 {
+    background: url('offers25.png') no-repeat;
+    height: 900px;
+    background-size:contain;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.parallax-2 {
+    background: url('foodluxury.png') no-repeat;
+    height: 900px;
+    background-size: contain;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.parallax-3 {
+    background: url('entertainment.png') no-repeat;
+    height: 900px;
+    background-size: contain;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.parallax-inner {
+    padding: 10% 0;
+}
+
+h2 {
+    font-size: 32px;
+    color: #555;
+    text-align: center;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin: 20px 0 10px;
+}
+
+p {
+    font-size: 16px;
+    color: #555;
+    text-align: justify;
+    line-height: 30px;
+    margin: 0 50px 40px;
+}
+
+p:nth-of-type(2),
+p:nth-of-type(3) {
+    margin: 40px 50px;
+}
+/* Navbar Styles */
+nav {
+    display: flex;
+    justify-content: space-between; /* This will space the logo and the menu items apart */
+    align-items: center; /* This ensures vertical alignment of logo and menu items */
+    padding: 15px;
+    position: fixed; /* Fix the navbar at the top */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10; /* Make sure the navbar stays on top of other content */
+    background-color: #fff; /* Optional: adds a white background to the navbar */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: adds some shadow to give depth */
+}
+
+.logo {
+    font-size: 40px;
+    font-weight: 35%;
+    color: rgb(95, 0, 0);
+    padding: 10px;
+}
+
+ul {
+    list-style-type: none;
+    display: flex; /* Aligns the list items horizontally */
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    padding: 5px 15px;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(95, 0, 0);
+    font-size: 16px;
+    font-family: Helvetica;
+    margin: 5px;
+    padding: 2px;
+}
+
+a:hover {
+    color: white;
+    background-color: rgb(95, 0, 0); /* Optional: adds a background color on hover */
+}
+
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="navdiv">
+            <div class="logo">Palm Paradise</div>
+        </div>
+        <ul>
+            <li><a href="tutorial2.html"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+            <li><a href="papergrid.html"><i class="fa-regular fa-address-card"></i> About Us</a></li>
+            <li><a href="file:///C:/Users/Mamatha/BCA%201st%20Sem/Web%20Technology/Trial%20Programs/Trial%20Programs/rombooking.html"><i class="fa fa-bed" aria-hidden="true"></i> Room Booking</a></li>
+            <li><a href="mapnew.html"><i class="fa fa-phone" aria-hidden="true"></i> Contact</a></li>
+            <li><a href=""><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a></li>
+            <li><a href="file:///C:/Users/Mamatha/BCA%201st%20Sem/Web%20Technology/Trial%20Programs/Trial%20Programs/Trial%20Programs/duumy.html"><i class="fa fa-comments" aria-hidden="true"></i> Review</a></li>
+            <li><a href="video1.html"><i class="fa fa-cutlery" aria-hidden="true"></i> Food order</a></li>
+            <li><a href=""><i class="fa-solid fa-tag"></i> Offers and promotions </a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <section class="parallax-1">
+            <div class="parallax-inner">
+                <h1>SPA SERVICES</h1>
+            </div>
+        </section>
+        <h2>SPA SERVICES</h2>
+        <p>"Escape into a world of tranquility and indulge in our exclusive spa treatments designed to refresh, rejuvenate, and revitalize your senses."
+
+            "Experience the ultimate luxury of serenity with our signature spa services, where relaxation meets elegance in every touch."
+            
+            "Let go of stress and surrender to the soothing hands of our expert therapists – your journey to relaxation begins here."
+            
+            "Unwind in our luxurious spa, where every treatment is an escape into paradise, leaving you feeling rejuvenated and renewed."
+            
+            "Pamper yourself with our exclusive wellness rituals, combining ancient techniques with modern luxury to enhance your mind, body, and spirit."</p>
+        <section class="parallax-2">
+            <div class="parallax-inner">
+                <h1>LUXURY DINING</h1>
+            </div>
+        </section>
+        <h2>LUXURY LUNCH</h2>
+        <p>Indulge in a lavish dining experience with our exquisite luxury lunch, where every dish is a masterpiece crafted with the finest ingredients. Our renowned chefs combine the art of gastronomy with innovative flair to deliver a memorable meal, offering you a perfect balance of taste, texture, and presentation.
+
+            Start your journey with a selection of gourmet appetizers, from delicate smoked salmon to fresh, vibrant salads adorned with seasonal produce. Each bite is a burst of flavor that sets the stage for the main course, which offers an array of expertly prepared dishes, including perfectly seared steaks, succulent seafood, and rich vegetarian options, all presented with a sophisticated twist.</p>
+        <section class="parallax-3">
+            <div class="parallax-inner">
+                <h1>ENTERTAINMENT</h1>
+            </div>
+        </section>
+        <h2>ENTERTAINMENT</h2>
+        <p>At our 5-star hotel, we believe that the art of entertainment is just as important as luxurious accommodations and world-class dining. From captivating performances to relaxing evening activities, we offer a variety of entertainment options to ensure your stay is nothing short of extraordinary.
+
+            Live Music & Performances: Enjoy an evening of smooth jazz, classical symphonies, or vibrant contemporary performances by talented local and international artists. Our elegant lounges and bars come alive with melodies that perfectly complement your relaxing evening, creating an ambiance of sophistication and warmth.</p>
+    </section>
+
+</body>
+
+</html>
