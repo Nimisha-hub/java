@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks Navbar</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="logo.png">
+
+    <!-- Google Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    
+    <style>
+          .hidden {
+            display: none;
+        }
+        /* Navbar Container */
+        .container {
+            display: flex;
+            align-items: center;
+            height: 70px;
+            padding: 0 65px;
+            border-bottom: 5px groove whitesmoke;
+        }
+
+        /* Logo */
+        .logo img {
+            width: 50px;
+            height: 50px;
+        }
+
+        /* Navigation Links */
+        nav {
+            display: flex;
+            gap: 30px;
+            margin-left: 20px;
+        }
+
+        nav a {
+            color: rgba(6, 71, 6, 0.886);
+            font-size: 1em;
+            text-decoration: none;
+            font-family: Helvetica, sans-serif;
+        }
+
+        /* Search Box */
+        .search-container {
+            position: relative;
+            margin-left: auto;
+        }
+
+        .search-container input {
+            width: 250px;
+            padding: 10px 40px 10px 10px;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            font-size: 16px;
+        }
+
+        .search-container .material-icons {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #888;
+            cursor: pointer;
+        }
+
+        /* User Icon */
+        .iconsa {
+            margin-left: 20px;
+        }
+
+        .iconsa .material-symbols-outlined {
+            font-size: 40px;
+            color: #aaa;
+            opacity: 0.6;
+        }
+
+        .greenheader {
+            background-color: rgba(10, 79, 49, 1);
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Button */
+        .greenheader button {
+            background-color: #0e382c;
+            color: white;
+            border-radius: 20px;
+            width: 170px;
+            height: 40px;
+            border: 1px solid white;
+            font-size: 13px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-left: 1200px;
+        }
+        .cards{
+            background-color: rgb(241, 241, 241);
+            width: 430px;
+            height: 239px;
+            border-radius: 25px;
+            max-height: 100vh; 
+            
+        }
+        .cards .picture img {
+    width: 100px; 
+    height: 100px; 
+    border-radius: 50%; 
+    object-fit: cover;
+    margin-left: 15px;
+    margin-top: 15px;
+        }
+        #c{
+            font-family:  Helvetica, sans-serif !important;
+            -webkit-font-smoothing: antialiased;
+            font-weight: bold;
+            font-size: 15px;
+        }
+        .cards .picture .content img{
+            width: 25px;
+            height: 25px;
+            margin-left: 150px;
+            /* margin-top: -120px; */
+            align-items: flex-start;
+            display: flex;
+
+
+        }
+        .content #logo{
+            margin-left: 190px;
+            margin-top: -20px; 
+        }
+        .cards .picture .content #c{
+            margin-left: 190px;
+            margin-top: -90px;
+
+        }
+        .cards .picture .content #p{
+            margin-left: 160px;
+            margin-top: -10px;
+
+        }
+        .cards .picture .content #c{
+            margin-left: 130px;
+            margin-top: -90px;
+
+        }
+        .cards{
+            margin-top: 330px;
+            margin-left: 100px;
+        }
+        .cards-container .cards{
+            margin-top: 130px;
+            margin-left: 100px;
+        }
+.logo12 {
+    width: 50px; 
+    height: auto;
+    position: relative;
+    top: -100px; /* Moves it up */
+    margin-right: 130px;
+
+
+    transform: translateX(-50%);
+}
+.cards .picture .content #p{
+            margin-left: 130px;
+            margin-top: -5px;
+            font-weight: bolder;
+        color: rgb(136, 135, 135);
+            font-family : Helvetica, sans-serif;
+font-feature-settings: normal;
+font-kerning: auto;
+font-optical-sizing :auto;
+font-size-adjust :none;
+font-stretch: 100%;
+font-size: 10px;
+font-display:block;
+font-weight:400;
+
+
+
+        }
+        .cards .picture .content #cs{
+            margin-left: 130px;
+margin-top: 1px;
+font-family: Helvetica, sans-serif;
+font-feature-settings: normal;
+font-kerning: auto;
+font-optical-sizing: auto;
+font-size: 13.5px;
+font-size-adjust: none;
+/* font-stretch: 100%; */
+font-style: normal;
+font-synthesis: weight style small-caps;
+font-variant-alternates: normal;
+font-variant-caps: normal;
+font-variant-east-asian: normal;
+/* font-variant-emoji: text; */
+font-variant-ligatures: normal;
+font-variant-numeric: normal;
+font-variant-position: normal;
+font-variation-settings: normal;
+font-weight: 300;
+color: rgb(120, 119, 119);
+
+word-spacing: 1px;
+letter-spacing: 1px;
+font-stretch: 200%;
+letter-spacing: -.1px!important;
+
+/*  */
+        }
+        #prices{
+            margin-left: 130px;
+            margin-top: 40px;
+            color: black;
+            font-weight: bolder;
+            font-size: 20px;
+        }
+        .buttons button{
+color: #e6e1e1;
+background-color: #aaa;
+border-radius: 20px;
+width: 100px;
+height: 30px;
+margin-left: 300px;
+margin-bottom: -20px;
+position: relative;
+  top: -40px; /* Moves the button up */
+  align-items: center;
+  font-size: 13px;
+  font-weight: bold;
+}
+.card1{
+    margin-top: -570px;
+    margin-left: 455px;
+}
+.cards2{
+    margin-top: -569px;
+    margin-left: 909px;
+}
+.cards3{
+    margin-top: -300px;
+}
+.cards4{
+    margin-top: -568px;
+    margin-left: 460px;
+}
+.active {
+            background-color: white;
+            color: #1E3A34;
+            /* border-radius: 8px;  */
+        }
+
+        
+        .inactive {
+            color: white;
+        }
+        .toggle-container {
+            display: flex;
+            border: 2px solid white;
+/*          */
+border-radius: 6px;
+            width: 300px;
+            height: 40px; 
+            justify-content: center;
+            font-family: Arial, sans-serif;
+            margin-left: 930px;
+        }
+
+       
+        .toggle-option {
+            flex: 1;
+            padding: 12px 20px;
+            cursor: pointer;
+            text-align: center;
+            font-size: 14px;
+            font-weight: bold;
+            transition: 0.3s;
+        } 
+        .greyheader {
+background-color: #f3ecec;
+
+    height: 50px; /* Add height */
+    width: 100%;
+    list-style-type: none;
+display: flex;      
+padding: 10px;
+padding-left: 70px;
+padding-top: 13px;
+gap: 4em;
+position: relative;
+box-sizing: border-box;
+
+
+}
+        .whiteheader{
+            height: 20px; /* Add height */
+    width: 100%;
+    background-color: white;
+    margin-left: 60px;
+        }
+    .greyheader a{
+text-decoration: none;
+position: relative;
+font-family:Helvetica, sans-serif;
+color:#888;
+padding: 0 10px;
+
+    }
+    .greyheader a::after {
+    content: "";
+    position: absolute;
+    background-color: #0e382c;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: width 0.3s ease; 
+    border-radius: 1px;
+}
+
+.greyheader a:hover {
+    color: #0e382c;
+}
+
+.greyheader a:hover::after {
+    width: 100%;  
+}
+.complements #complement{
+    position: relative;  
+    left: 100px;        
+    top: 100px; 
+    font-family: Helvetica, sans-serif;
+font-feature-settings: normal;
+font-kerning: auto;
+font-optical-sizing: auto;
+font-size: 13.5px;
+font-size-adjust: none;
+/* font-stretch: 100%; */
+font-style: normal;
+font-synthesis: weight style small-caps;
+font-variant-alternates: normal;
+font-variant-caps: normal;
+font-variant-east-asian: normal;
+/* font-variant-emoji: text; */
+font-variant-ligatures: normal;
+font-variant-numeric: normal;
+font-variant-position: normal;
+font-variation-settings: normal;
+font-weight: 300;
+
+
+word-spacing: 1px;
+letter-spacing: 1px;
+font-stretch: 200%;
+letter-spacing: -.1px!important;
+font-size: 15px;        
+}
+.complements #com {
+    font-family: Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    word-spacing: 1px;
+    letter-spacing: -.1px!important;
+    position: relative; /* Ensure top and left work */
+    top: 70px;
+    position: relative;
+    left: 80px;
+    padding: 20px;
+}
+html, body {
+    overflow-x: hidden;  
+    overflow-y: auto;    
+    height: 100%;
+    margin: 0;          
+}
+
+.cards5 {
+    display: flex;
+    
+    justify-content: space-around; 
+    gap: 20px; 
+    position: relative; /* Enable left property to work */
+    left: -520px;
+    padding: 20px;
+  top: 40px;
+    margin-top: 250px;
+    transition: all 0.3s ease-in-out; /* Smooth transition when displaying/hiding cards */
+}
+.cards6 {
+    display: flex;
+    
+    justify-content: space-around; 
+    gap: 20px; 
+    position: relative; /* Enable left property to work */
+    left: -70px;
+    padding: 20px;
+top: -817px;
+    margin-top: 250px;
+    transition: all 0.3s ease-in-out; /* Smooth transition when displaying/hiding cards */
+}
+.cards7 {
+    display: flex;
+    
+    justify-content: space-around; 
+    gap: 20px; 
+    position: relative; /* Enable left property to work */
+    left: 380px;
+    padding: 20px;
+top: -1675px;
+    margin-top: 250px;
+    transition: all 0.3s ease-in-out; 
+}
+.cards8 {
+    display: flex;
+    
+    justify-content: space-around; 
+    gap: 20px; 
+    position: relative; /* Enable left property to work */
+    left: -520px;
+    padding: 20px;
+top: -2275px;
+    margin-top: 250px;
+    transition: all 0.3s ease-in-out; /* Smooth transition when displaying/hiding cards */
+}
+.cards9 {
+    display: flex;
+    
+    justify-content: space-around; 
+    gap: 20px; 
+    position: relative; /* Enable left property to work */
+    left: -70px;
+    padding: 20px;
+top: -3132px;
+    margin-top: 250px;
+    transition: all 0.3s ease-in-out; /* Smooth transition when displaying/hiding cards */
+}
+.cards10 {
+    display: flex;
+    
+    justify-content: space-around; 
+    gap: 20px; 
+    position: relative; /* Enable left property to work */
+    left: 380px;
+    padding: 20px;
+    top: -3989px;
+    margin-top: 250px;
+    transition: all 0.3s ease-in-out; /* Smooth transition when displaying/hiding cards */
+}
+.filter-link.active {
+    background-color: #0e382c; /* Add styles for active filter */
+    color: white;
+}
+.cards {
+  display: none; /* Default visibility for cards */
+}
+
+.hidden {
+  display: none;
+}
+.auto-scroll {
+   overflow-y: overlay;
+   overflow-x: overlay;
+}
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+    </style>
+    
+</head>
+<body>
+
+   
+    <div class="container">
+        <div class="logo">
+            <img src="starbuckslogo.png" alt="Starbucks Logo">
+        </div>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Gift</a>
+            <a href="#">Order</a>
+            <a href="#">Pay</a>
+            <a href="#">Store</a>
+        </nav>
+
+        <div class="search-container">
+            <input type="search" placeholder="Search...">
+            <span class="material-icons">search</span>
+        </div>
+
+        <div class="iconsa">
+            <span class="material-symbols-outlined">account_circle</span>
+        </div>
+    </div>
+<div class="whiteheader">
+    Home > Order
+</div>
+
+    <div class="greenheader">
+        <div class="toggle-container">
+            <div class="toggle-option active"> <i class="fa fa-cutlery" aria-hidden="true"></i> Dine-In</div>
+            <div class="toggle-option inactive"><i class="fa fa-shopping-bag" aria-hidden="true"></i> Takeaway</div>
+        </div>
+    </div>
+    <div class="greyheader">
+        <a href="#" class="filter-link" data-category="bestseller">Bestseller</a>
+        <a href="#" class="filter-link" data-category="drinks">Drinks</a>
+        <a href="#" class="filter-link" data-category="food">Food</a>
+        <a href="#" class="filter-link" data-category="merchandise">Merchandise</a>
+        <a href="#" class="filter-link" data-category="coffee-at-home">Coffee At Home</a>
+        <a href="#" class="filter-link" data-category="ready-to-eat">Ready to Eat</a>
+        </div>
+        <!--2-->
+
+
+
+
+
+
+
+
+
+
+
+        
+    </div>
+<div class="complements">
+   <p id="complement" class="complement-description"><b>Bestseller</b><br><br></p>
+<p id="com">Everyone's favorite Starbucks put together in a specially curated collection.</p>
+
+</div>
+    
+<!---1st card-->
+<div class="cards-container">
+    <div class="cards"  data-category="bestseller">
+        <div class="picture">
+            <img src="java chip.webp" >
+              <div class="content">
+                <img class="logo12"src="logo1-removebg-preview.png">
+                <p id="c">Java Chip Frappuccino</p>
+                <p id="p">TALL(345 ml) .392 kcal</p>
+                 <p id="cs"> Mocha sauce and Frappuccino® chips <br>blended with with Frappu...</p>
+                <div class="price">
+                    <p id="prices" > &#8377; 441</p>
+                    <div class="buttons">
+                             <button>Add Item</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+    </div>
+</div>
+
+    <!---2ns card-->
+    <div class="card1">
+    <div class="cards" data-category="bestseller">
+        <div class="picture">
+            <img src="starbucks2.webp">
+              <div class="content">
+                <img class="logo12"src="logo1-removebg-preview.png">
+                <p id="c">Java Chip Frappuccino</p>
+                <p id="p">TALL(345 ml) .392 kcal</p>
+                 <p id="cs"> Mocha sauce and Frappuccino® chips <br>blended with with Frappu...</p>
+                <div class="price">
+                    <p id="prices" > &#8377; 441</p>
+                    <div class="buttons">
+                             <button>Add Item</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <!--3rd -->
+    <div class="cards2">
+        <div class="cards" data-category="bestseller">
+            <div class="picture">
+                <img src="milk.webp">
+                  <div class="content">
+                    <img class="logo12"src="logo1-removebg-preview.png">
+                    <p id="c">Double Chocolate Chip Frappuccino</p>
+                    <p id="p">TALL(345 ml) .392 kcal</p>
+                     <p id="cs"> Mocha sauce and Frappuccino® chips <br>blended with with Frappu...</p>
+                    <div class="price">
+                        <p id="prices" > &#8377; 441</p>
+                        <div class="buttons">
+                                 <button>Add Item</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--4th -->
+    <div class="cards3">
+        <div class="cards" data-category="bestseller">
+            <div class="picture">
+                <img src="coffee.webp">
+                  <div class="content">
+                    <img class="logo12"src="logo1-removebg-preview.png">
+                    <p id="c">Picco Cappuccino</p>
+                    <p id="p">TALL(345 ml) .392 kcal</p>
+                     <p id="cs"> Mocha sauce and Frappuccino® chips <br>blended with with Frappu...</p>
+                    <div class="price">
+                        <p id="prices" > &#8377; 441</p>
+                        <div class="buttons">
+                                 <button>Add Item</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--5th -->
+    <div class="cards4">
+        <div class="cards" data-category="bestseller">
+            <div class="picture">
+                <img src="coldcofee.webp">
+                  <div class="content">
+                    <img class="logo12"src="logo1-removebg-preview.png">
+                    <p id="c">Caffe Americano</p>
+                    <p id="p">TALL(345 ml) .392 kcal</p>
+                     <p id="cs"> Mocha sauce and Frappuccino® chips <br>blended with with Frappu...</p>
+                    <div class="price">
+                        <p id="prices" > &#8377; 441</p>
+                        <div class="buttons">
+                                 <button>Add Item</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="cards5">
+        <div class="cards" data-category="drinks">
+            <div class="picture">
+                <img src="drink1card.png" >
+                  <div class="content">
+                    <img class="logo12"src="logo1-removebg-preview.png">
+                    <p id="c">Cold coffee</p>
+                    <p id="p">TALL(345 ml) .392 kcal</p>
+                     <p id="cs"> Mocha sauce and Frappuccino® chips <br>blended with with Frappu...</p>
+                    <div class="price">
+                        <p id="prices" > &#8377; 441</p>
+                        <div class="buttons">
+                                 <button>Add Item</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cards6">
+        <div class="cards" data-category="drinks">
+            <div class="picture">
+                <img src="drink1card.png" >
+                  <div class="content">
+                    <img class="logo12"src="logo1-removebg-preview.png">
+                    <p id="c">Java Chip Frappuccino</p>
+                    <p id="p">TALL(345 ml) .392 kcal</p>
+                     <p id="cs"> Mocha sauce and Frappuccino® chips <br>blended with with Frappu...</p>
+                    <div class="price">
+                        <p id="prices" > &#8377; 441</p>
+                        <div class="buttons">
+                                 <button>Add Item</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cards7">
+        <div class="cards" data-category="drinks">
+            <div class="picture">
+                <img src="drink1card.png" >
+                  <div class="content">
+                    <img class="logo12"src="logo1-removebg-preview.png">
+                    <p id="c">Java Chip Frappuccino</p>
+                    <p id="p">TALL(345 ml) .392 kcal</p>
+                     <p id="cs"> Mocha sauce and Frappuccino® chips <br>blended with with Frappu...</p>
+                    <div class="price">
+                        <p id="prices" > &#8377; 441</p>
+                        <div class="buttons">
+                                 <button>Add Item</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cards8">
+        <div class="cards" data-category="drinks">
+            <div class="picture">
+                <img src="drink1card.png" >
+                  <div class="content">
+                    <img class="logo12"src="logo1-removebg-preview.png">
+                    <p id="c">Java Chip Frappuccino</p>
+                    <p id="p">TALL(345 ml) .392 kcal</p>
+                     <p id="cs"> Mocha sauce and Frappuccino® chips <br>blended with with Frappu...</p>
+                    <div class="price">
+                        <p id="prices" > &#8377; 441</p>
+                        <div class="buttons">
+                                 <button>Add Item</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cards9">
+        <div class="cards" data-category="drinks">
+            <div class="picture">
+                <img src="orderpage1.png" >
+                  <div class="content">
+                    <img class="logo12"src="logo1-removebg-preview.png">
+                    <p id="c">Java Chip Frappuccino</p>
+                    <p id="p">TALL(345 ml) .392 kcal</p>
+                     <p id="cs"> Mocha sauce and Frappuccino® chips <br>blended with with Frappu...</p>
+                    <div class="price">
+                        <p id="prices" > &#8377; 441</p>
+                        <div class="buttons">
+                                 <button>Add Item</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cards10">
+        <div class="cards" data-category="drinks">
+            <div class="picture">
+                <img src="drink1card.png" >
+                  <div class="content">
+                    <img class="logo12"src="logo1-removebg-preview.png">
+                    <p id="c">Java Chip Frappuccino</p>
+                    <p id="p">TALL(345 ml) .392 kcal</p>
+                     <p id="cs"> Mocha sauce and Frappuccino® chips <br>blended with with Frappu...</p>
+                    <div class="price">
+                        <p id="prices" > &#8377; 441</p>
+                        <div class="buttons">
+                                 <button>Add Item</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <script>
+      function filterItems(category) {
+    const allCards = document.querySelectorAll('.cards');
+    const bestsellerDescription = document.querySelector('.complement-description');
+    const description = document.querySelector('#com');
+    
+    allCards.forEach(card => {
+        if (category === 'all' || card.getAttribute('data-category') === category) {
+            card.style.display = 'block'; // Show the card
+        } else {
+            card.style.display = 'none'; // Hide the card
+        }
+    });
+
+    
+    if (category === 'drinks') {
+        bestsellerDescription.style.display = 'none';
+        description.style.display = 'none';
+    } else {
+        bestsellerDescription.style.display = 'block';
+        description.style.display = 'block';
+    }
+}
+// Add event listeners to the filter links
+const filterLinks = document.querySelectorAll('.filter-link');
+filterLinks.forEach(link => {
+    link.addEventListener('click', function (event) {
+        event.preventDefault();
+        const category = this.getAttribute('data-category');
+        filterItems(category); // Filter items based on the clicked category
+    });
+});
+
+// Show all products by default (this part is important to show all initially)
+document.addEventListener("DOMContentLoaded", function () {
+    filterItems('all'); // Show all products when the page loads
+}); 
+function filterCardsByCategory(category) {
+  const cards = document.querySelectorAll('.cards'); // Get all cards
+  
+  cards.forEach(card => {
+    const cardCategory = card.getAttribute('data-category'); // Get the category of each card
+    
+    // If the card's category matches the selected category, show it; otherwise, hide it
+    if (cardCategory === category) {
+      card.classList.remove('hidden');
+    } else {
+      card.classList.add('hidden');
+    }
+  });
+  document.getElementById('cards-container').scrollTop = 0;
+}
+    document.addEventListener("DOMContentLoaded", function() {
+        const toggleOptions = document.querySelectorAll(".toggle-option");
+
+        toggleOptions.forEach(option => {
+            option.addEventListener("click", function() {
+                toggleOptions.forEach(opt => opt.classList.remove("active"));
+                this.classList.add("active");
+            });
+        });
+    });
+</script>
+    
+</body>
+
+</html>
