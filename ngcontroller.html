@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="loginApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glassmorphism Login Form | CodingNepal</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body ng-controller="loginController">
+   
+  <div class="wrapper">
+    <form ng-submit="submitLogin()">
+      <h2>Login</h2>
+
+      <!-- Email Input Field -->
+      <div class="input-field">
+        <input type="text" ng-model="email" required ng-blur="validateEmail()" ng-focus="focusField('email')">
+        <label>Enter your email</label>
+        <span class="error" ng-show="emailError">Invalid email format.</span>
+      </div>
+
+      <!-- Password Input Field -->
+      <div class="input-field">
+        <input type="password" ng-model="password" required ng-blur="validatePassword()" ng-focus="focusField('password')">
+        <label>Enter your password</label>
+        <span class="error" ng-show="passwordError">Password must be at least 6 characters.</span>
+      </div>
+
+      <!-- Remember me checkbox -->
+      <div class="forget">
+        <label for="remember">
+          <input type="checkbox" id="remember" ng-model="rememberMe">
+          <p>Remember me</p>
+        </label>
+        <a href="#">Forgot password?</a>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" ng-click="submitLogin()">Log In</button>
+
+      <!-- Register link -->
+      <div class="register">
+        <p>Don't have an account? <a href="registration.html">Register</a></p>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    var app = angular.module('loginApp', []);
+
+    app.controller('loginController', function($scope) {
+      $scope.email = '';
+      $scope.password = '';
+      $scope.rememberMe = false;
+      $scope.emailError = false;
+      $scope.passwordError = false;
+
+      // Focus on the input field
+      $scope.focusField = function(field) {
+        console.log(field + ' is focused');
+      };
+
+      // Validate email format
+      $scope.validateEmail = function() {
+        var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+        if (!emailPattern.test($scope.email)) {
+          $scope.emailError = true;
+        } else {
+          $scope.emailError = false;
+        }
+      };
+
+
+
+
+      // Validate password length
+      $scope.validatePassword = function() {
+        if ($scope.password.length < 6) {
+          $scope.passwordError = true;
+        } else {
+          $scope.passwordError = false;
+        }
+      };
+
+
+      
+
+      // Handle form submission
+      $scope.submitLogin = function() {
+        if ($scope.emailError || $scope.passwordError) {
+          alert('Please correct the errors before submitting the form.');
+        } else {
+          alert('Login Successful!');
+        }
+      };
+    });
+  </script>
+</body>
+</html>

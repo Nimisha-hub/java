@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Successful</title>
+    <style>
+        /* General Body and Container */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+        }
+
+        /* Success Box */
+        .success-box {
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .icon {
+            font-size: 50px;
+            color: #28a745; /* Green color for success */
+        }
+
+        h1 {
+            color: #333;
+            font-size: 30px;
+            margin-top: 20px;
+        }
+
+        .subheading {
+            color: #555;
+            font-size: 18px;
+        }
+
+        .welcome-message {
+            color: #777;
+            margin-top: 15px;
+        }
+
+        .next-steps p {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        /* Buttons */
+        .btn {
+            padding: 12px 20px;
+            font-size: 16px;
+            margin: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .primary {
+            background-color: #007bff; /* Blue */
+            color: white;
+        }
+
+        .secondary {
+            background-color: #6c757d; /* Grey */
+            color: white;
+        }
+
+        .btn:hover {
+            opacity: 0.8;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 30px;
+            color: #777;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="success-box">
+            <div class="icon">
+                <!-- Success Icon (Green Checkmark) -->
+                <span>&#10003;</span>
+            </div>
+            <h1>Congratulations, !</h1>
+            <p class="subheading">Your registration was successful.</p>
+            <p class="welcome-message">Welcome to Palm Paradise!</p>
+            <div class="next-steps">
+                <p>What would you like to do next?</p>
+                <button class="btn primary">
+                    <a href="file:///C:/Users/Mamatha/BCA%201st%20Sem/Web%20Technology/Trial%20Programs/tutorial2.html" style="color: white; text-decoration: none;">Go to Dashboard</a>
+                </button>
+                <button class="btn secondary">Explore Features</button>
+            </div>
+        </div>
+        <script>
+            // Retrieve the user's name from localStorage and display it on the page
+            const userName = localStorage.getItem('userName');
+            if (userName) {
+                document.getElementById('user-name').textContent = userName;
+            } else {
+                document.getElementById('user-name').textContent = 'User';
+            }
+        </script>
+        <footer>
+            <p><a href="#">Need help? Contact support</a></p>
+            <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Room Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: #f4f4f4;
+        }
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background: white;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+        th {
+            background: #333;
+            color: white;
+        }
+        button {
+            margin: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        .add-btn { background: green; color: white; }
+        .delete-btn { background: red; color: white; }
+        #modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 15px;
+            border: 1px solid black;
+        }
+        
+    </style>
+</head>
+<body>
+    <h2>Hotel Room Management</h2>
+    <button class="add-btn" onclick="openModal()">Add Room</button>
+    <table>
+        <thead>
+            <tr>
+                <th>Room Number</th>
+                <th>Type</th>
+                <th>Price</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="roomTable"></tbody>
+    </table>
+
+    <div id="modal">
+        <h3>Add Room</h3>
+        <input type="text" id="roomNumber" placeholder="Room Number"><br><br>
+        <input type="text" id="roomType" placeholder="Type"><br><br>
+        <input type="number" id="roomPrice" placeholder="Price"><br><br>
+        <button onclick="addRoom()">Save</button>
+        <button onclick="closeModal()">Cancel</button>
+    </div>
+
+    <script>
+        let rooms = [];
+
+        function openModal() {
+            document.getElementById("modal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("modal").style.display = "none";
+        }
+
+        function addRoom() {
+            let roomNumber = document.getElementById("roomNumber").value;
+            let roomType = document.getElementById("roomType").value;
+            let roomPrice = document.getElementById("roomPrice").value;
+
+            if (!roomNumber || !roomType || !roomPrice) {
+                alert("Please fill in all fields!");
+                return;
+            }
+
+            rooms.push({ number: roomNumber, type: roomType, price: roomPrice });
+            displayRooms();
+            closeModal();
+        }
+
+        function displayRooms() {
+            let table = document.getElementById("roomTable");
+            table.innerHTML = "";
+            rooms.forEach((room, index) => {
+                table.innerHTML += `
+                    <tr>
+                        <td>${room.number}</td>
+                        <td>${room.type}</td>
+                        <td>${room.price}</td>
+                        <td>
+                            <button class="delete-btn" onclick="deleteRoom(${index})">Delete</button>
+                        </td>
+                    </tr>
+                `;
+            });
+        }
+
+        function deleteRoom(index) {
+            rooms.splice(index, 1);
+            displayRooms();
+        }
+    </script>
+</body>
+</html>
